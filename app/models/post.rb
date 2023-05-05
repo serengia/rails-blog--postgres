@@ -13,6 +13,5 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-
   update_user_post_counter
 end
