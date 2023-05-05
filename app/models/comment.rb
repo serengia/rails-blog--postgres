@@ -4,7 +4,9 @@ class Comment < ApplicationRecord
 
   after_save :update_post_comment_counter
 
-  validates :text, presence: true, length: { maximum: 250 }
+  validates :text, presence: true, length: {minimum:3, maximum: 250, 
+    too_long: "%{count} characters is the maximum allowed",
+    too_short: "%{count} characters is the minimum allowed" }
 
   def update_post_comment_counter
     post.increment!(:comments_counter)
