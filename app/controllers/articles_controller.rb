@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
-    def index
-    end
-    def testing
-    end
+  def index; end
+
+  def testing; end
 end
