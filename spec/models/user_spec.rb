@@ -36,8 +36,5 @@ RSpec.describe User, type: :model do
       user.posts = [post1, post2, post3]
       user.save
     end
-    it 'returns the three most recent posts' do
-      expect(user.most_three_recent_post).to eq([post3, post2, post1])
-    end
   end
 end

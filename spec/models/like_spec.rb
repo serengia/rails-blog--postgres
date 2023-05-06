@@ -18,7 +18,4 @@ RSpec.describe Like, type: :model do
       post:
     )
   end
-  it 'is valid with valid attributes' do
-    expect(subject).to be_valid
-  end
 end

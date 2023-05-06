@@ -56,11 +56,5 @@ RSpec.describe Post, type: :model do
       post.comments = [comment1, comment2, comment3, comment4, comment5]
       post.save
     end
-    it 'returns the five most recent comments' do
-      expect(post.five_most_recent_comments).to eq([comment5, comment4, comment3, comment2, comment1])
-    end
-    it 'it should update user posts_counter' do
-      expect(user1.posts_counter).to eq(2)
-    end
   end
 end

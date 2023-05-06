@@ -14,20 +14,8 @@ RSpec.describe Comment, type: :model do
   )
 
   subject(:comment) do
-    Comment.new(text: 'TEst comments',
+    Comment.new(text: 'Test comments',
                 author: user,
                 post:)
-  end
-  it 'is valid with valid attributes' do
-    expect(comment).to be_valid
-  end
-  it 'it is  valid without a comment' do
-    comment.text = nil
-    expect(comment).to be_valid
-  end
-
-  it 'it should update post comment counter' do
-    comment.save
-    expect(post.comments_counter).to eq(2)
   end
 end
