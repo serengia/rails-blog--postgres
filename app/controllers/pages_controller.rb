@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
-  def login
-  end
+  def login; end
 
   def about
     # userArr = User.all
