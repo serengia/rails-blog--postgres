@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
   let!(:user) do
     User.create(name: 'Anything',
-      photo: 'http://licalhost:3000/anything.jpg',
-      bio: 'Anything test',
-      posts_counter: 0)
-  end 
+                photo: 'http://licalhost:3000/anything.jpg',
+                bio: 'Anything test',
+                posts_counter: 0)
+  end
 
   let!(:post) do
     Post.create(
@@ -16,7 +16,7 @@ RSpec.describe "Posts", type: :request do
       comments_counter: 0,
       likes_counter: 0
     )
-  end 
+  end
 
   describe 'Post GET /index' do
     it 'return post http success' do
