@@ -42,6 +42,7 @@ p {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   position: sticky;
+  z-index: 1000;
   top: 0;
   .header-container {
     height: 6rem;
@@ -189,10 +190,11 @@ p {
   }
 }
 
+.single-post-page {
+  padding: 3rem 0;
+}
+
 .post-body {
   background-color: #fff;
   padding: 2rem;
-
-  .content {
-  }
 }
