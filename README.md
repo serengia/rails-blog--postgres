@@ -46,6 +46,18 @@ The application has the following key features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Future features
+
+Some of the future features I will add include:
+
+- Forms
+- Validations, Model specs
+- Add Devise
+- Add authorization rules
+- Integration specs for Views
+- Add API endpoints
+- API documentation
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live project <a name="live-demo"></a>
