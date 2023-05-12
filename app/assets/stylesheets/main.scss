@@ -175,4 +175,24 @@ p {
 
 .posts-page {
   padding: 3rem 0;
+
+  .comments-wrapper {
+    margin-bottom: 3rem;
+    margin-top: -4rem;
+  }
+}
+
+.comments {
+  background-color: #fff;
+  .comment {
+    padding: 2rem;
+  }
+}
+
+.post-body {
+  background-color: #fff;
+  padding: 2rem;
+
+  .content {
+  }
 }
