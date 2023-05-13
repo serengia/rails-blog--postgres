@@ -1,14 +1,13 @@
 <main class="posts-page">
   <div class="row">
    <%= render partial: "shared/user_card", locals: {u: @user}%>
+   <% @posts.each do |p|%>
+        <%= render partial: "shared/post_body", locals: {p:p} %>
+        <%if !p.five_most_recent_comments.empty?%>
+            <%= render partial: "shared/comments", local: {c: p.five_most_recent_comments}%>
+        <%end%>
+   <%end%>
 
-     <%@posts.each do |p|%>
-      <%= render partial: "shared/post_card", locals: {p:p}%>
-      <div class="comments-wrapper">
-      <%= render partial: "shared/comments"%>
-      </div>
-     <%end%>
-   
   </div>
 
 </main>
