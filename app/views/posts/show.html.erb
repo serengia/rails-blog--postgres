@@ -1,8 +1,25 @@
 <div class="single-post-page">
   <div class="row">
     <%= render partial: "shared/post_body"%>
-   <div class="comments-wrapper">
-      <%= render partial: "shared/comments"%>
+  
+    <% if  !@post&.comments.empty?%>
+    <div class ="comments_wrapper">
+       <% @post.comments.each do |comment| %>
+       <%= render partial: 'shared/comments', locals: { c: comment } %>
+       <% end %>
+
+       <%end%>
+    <div class="comment_like_holder">
+     <div class= "comment_form_holder">
+       <h3>Leave a comment</h3>
+      <%= render 'comments/form', comment: @comment %>
       </div>
-  </div>
+
+       <div class="like_form_holder">
+        <h3>Like this post</h3>
+        <%= render 'likes/form', like: @like %>
+        </div>
+      </div>
+    </div>
+    
 </div>
