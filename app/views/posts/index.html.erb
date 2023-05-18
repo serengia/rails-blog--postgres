@@ -3,9 +3,11 @@
    <%= render partial: "shared/user_card", locals: {u: @user}%>
    <% @posts.each do |p|%>
         <%= render partial: "shared/post_body", locals: {p:p} %>
-        <%if !p.five_most_recent_comments.empty?%>
-            <%= render partial: "shared/comments", local: {c: p.five_most_recent_comments}%>
-        <%end%>
+        <div class="comments-wrapper">
+          <%if !p.five_most_recent_comments.empty?%>
+              <%= render partial: "shared/comments", locals: {comments: p.five_most_recent_comments}%>
+          <%end%>
+        </div>
    <%end%>
 
   </div>

@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
-  belongs_to :author, foreign_key: :author_id, class_name: 'User', counter_cache: :posts_counter
+  belongs_to :author, foreign_key: :author_id, class_name: 'User'
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
   after_save :update_user_post_counter
+  after_destroy :decrease_user_post_counter
 
   validates :title, presence: true, length: { minimum: 5, maximum: 250,
                                               too_long: '%<count>s characters is the maximum allowed' }
@@ -13,6 +14,10 @@ class Post < ApplicationRecord
 
   def update_user_post_counter
     author.increment!(:posts_counter)
+  end
+
+  def decrease_user_post_counter
+    author.decrement!(:posts_counter)
   end
 
   def five_most_recent_comments

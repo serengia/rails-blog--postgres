@@ -32,7 +32,7 @@ h2 {
 }
 
 p {
-  margin-bottom: 0.8rem;
+  line-height: 1.5;
 }
 
 .row {
@@ -181,14 +181,21 @@ p {
 
   .comments-wrapper {
     margin-bottom: 3rem;
-    margin-top: -4rem;
+    margin-top: -2rem;
   }
 }
 
 .comments {
   background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
   .comment {
-    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 

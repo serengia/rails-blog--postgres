@@ -1,6 +1,6 @@
 <div class="comments">
-  <%comment = {author: {name: "seree"}, text: "sample commenttt"} %>
-  <p class="comment"><span>Username: <%%> </span><%= %>
-<span>Comment:<%= c.text%></span><%=  %> </p>
-
+  <%comments.each do |c|%>
+    <p class="comment"><span>Username: <%= c.author.name%></span>
+    <span>Comment: <%= c.text%></span></p>
+  <%end%>
 </div>
